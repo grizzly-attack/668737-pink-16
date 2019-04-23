@@ -1,0 +1,117 @@
+.main-nav {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    .centering;
+    width: 620px;
+
+    margin: 0;
+    padding-right: 10px;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -57px;
+  right: 20px;
+  z-index: 2;
+
+  background-color: transparent;
+  display: block;
+  width: 50px;
+  height: 24px;
+
+  padding: 0;
+
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 50px;
+  height: 2px;
+
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before,
+.main-nav--closed .main-nav__toggle:focus::before {
+  background-color: rgba(209, 40, 86, 1);
+  box-shadow: 0 8px 0 0 rgba(209, 40, 86, 1), 0 16px 0 0 rgba(209, 40, 86, 1);
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: rgba(209, 40, 86, 0.3);
+  box-shadow: 0 8px 0 0 rgba(209, 40, 86, 0.3), 0 16px 0 0 rgba(209, 40, 86, 0.3);
+}
+
+
+.main-nav--opened .main-nav__toggle {
+  width: 24px;
+  height: 23px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 15px;
+    right: -4px;
+
+    width: 30px;
+    height: 5px;
+
+    background-color: #ffffff;
+
+    @media (min-width: @tablet-width) {
+      top: 5px;
+      right: -4px;
+    }
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: rgba(209, 40, 86, 1);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(209, 40, 86, 0.3);
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .site-list__item {
+  display: block;
+}
+
+@media (max-width: @desktop-width) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+}

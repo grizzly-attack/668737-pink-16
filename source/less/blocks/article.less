@@ -1,0 +1,132 @@
+.article {
+  display: none;
+
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding-right: 40px;
+    padding-top: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @bg-light-grey;
+    padding-top: 68px;
+  }
+}
+
+.article__container {
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    padding-left: 330px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-right: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      background-image: url("../img/icon-timer.svg");
+      background-size: 238px auto;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+
+      top: 0;
+      left: 20px;
+
+      width: 238px;
+      height: 276px;
+    }
+
+    &::after {
+      content: "24";
+      position: absolute;
+
+      top: 55px;
+      left: 39px;
+
+      width: 202px;
+      height: 202px;
+
+      border: solid 14px #d22856;
+      border-radius: 50%;
+
+      box-sizing: border-box;
+
+      color: #d22856;
+      font-weight: 700;
+      font-size: 96px;
+      text-align: center;
+      line-height: 160px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 55px;
+    padding-bottom: 112px;
+    padding-left: 395px;
+    padding-right: 40px;
+
+    &::before {
+      background-size: 298px auto;
+      width: 298px;
+      height: 345px;
+
+      top: -35px;
+      left: 30px;
+    }
+
+    &::after {
+      width: 253px;
+      height: 253px;
+
+      top: 35px;
+      left: 52px;
+
+      border-width: 17px;
+      font-size: 120px;
+      line-height: 205px;
+    }
+  }
+}
+
+.article__title {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.article__title br {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.article__text {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 10px;
+
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 22px;
+    padding-bottom: 30px;
+
+    line-height: 30px;
+  }
+}
+
+.article__link {
+  color: #d22856;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 20px;
+  }
+}
