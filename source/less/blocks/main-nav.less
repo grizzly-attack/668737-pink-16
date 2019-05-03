@@ -1,13 +1,5 @@
 .main-nav {
   position: relative;
-
-  @media (min-width: @desktop-width) {
-    .centering;
-    width: 620px;
-
-    margin: 0;
-    padding-right: 10px;
-  }
 }
 
 .main-nav__toggle {
@@ -25,10 +17,6 @@
 
   cursor: pointer;
   border: none;
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
 }
 
 .main-nav--closed .main-nav__toggle::before {
@@ -73,11 +61,6 @@
     height: 5px;
 
     background-color: #ffffff;
-
-    @media (min-width: @tablet-width) {
-      top: 5px;
-      right: -4px;
-    }
   }
 
   &::before {
@@ -110,7 +93,18 @@
   display: block;
 }
 
-@media (max-width: @desktop-width) {
+@media (min-width: @tablet-width) {
+  .main-nav--opened .main-nav__toggle {
+    top: 5px;
+    right: -4px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
   .main-nav--closed .site-list__item {
     display: none;
   }
