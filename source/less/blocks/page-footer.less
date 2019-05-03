@@ -1,56 +1,23 @@
-.page-footer {
-  .centering;
-
-  @media (min-width: @tablet-width) {
-    width: 620px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 960px;
-  }
-}
-
 .page-footer__logo {
   margin: 0;
   width: 146px;
 
-  @media (min-width: @desktop-width) {
-    margin-left: 10px;
-
-    align-self: flex-start;
-  }
+  display: block;
 }
 
-.page-footer__invisible {
+.page-footer__hidden {
   display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-  }
 }
 
-.page-footer__wrapper {
+.page-footer__container {
   display: flex;
   align-items: center;
-
-  flex-direction: column;
-
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 28px;
-  }
-
-  padding-top: 40px;
-  padding-bottom: 40px;
-
-
   flex-wrap: wrap;
+  flex-direction: column;
+  width: 320px;
 
-  @media (min-width: @desktop-width) {
-    padding-top: 75px;
-    padding-bottom: 80px;
-  }
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .page-footer__copyright {
@@ -66,31 +33,9 @@
   line-height: 18px;
 
   margin: 0;
-
-  @media (min-width: @tablet-width) {
-    margin-left: 20px;
-    padding-top: 10px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 0;
-
-    width: 150px;
-    margin-left: 0;
-    margin-right: 10px;
-  }
 }
 
-.page-footer__copyright-link {
-  @media (min-width: @tablet-width) {
-    display: block;
-
-    width: 27px;
-    height: 34px;
-  }
-}
-
-.page-footer__copyright-ha {
+.page-footer__copyright-logo {
   fill: #d22856;
 
   &:hover,
@@ -114,5 +59,57 @@
   &:active {
     fill: rgba(40, 54, 69, 1);
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__hidden {
+    display: block;
+  }
+
+  .page-footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 660px;
+    margin-top: 38px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .page-footer__copyright {
+    padding-left: 20px;
+    padding-top: 8px;
+  }
+
+  .page-footer__copyright-link {
+    display: block;
+
+    width: 27px;
+    height: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__logo {
+    align-self: flex-start;
+    width: 153px;
+  }
+
+  .page-footer__container {
+    margin-top: 73px;
+    margin-bottom: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    width: 960px;
+  }
+
+  .page-footer__copyright {
+    padding-top: 0;
+    padding-left: 0;
+
+    width: 153px;
+    margin-left: 0;
   }
 }
