@@ -54,7 +54,7 @@
     </div>
   </header>
 
-  <main class="page-main page-main--bg">
+  <main class="page-main page-main--background">
 
     <div class="wrapper">
       <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
@@ -63,20 +63,24 @@
       <section class="competition">
         <div class="wrapper">
           <h2 class="visually-hidden">Форма для участия в конкурсе</h2>
-        <p class="competition__content">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="competition__unvisible"> Пожалуйста, заполните форму ниже:</span></p>
+          <p class="competition__content">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="competition--hidden"> Пожалуйста, заполните форму ниже:</span></p>
 
         <form class="competition__form form" method="get" action="https://echo.htmlacademy.ru">
           <div class="form__container form__container--name">
-            <div><label class="form__title" for="surname">Фамилия:</label>
-            <input class="form__field" type="text" name="surname"  id="surname" value="" placeholder="Укажите фамилию *" required>
+            <div class="form__item-name">
+              <label class="form__title" for="surname">Фамилия:</label>
+              <input class="form__field" type="text" name="surname"  id="surname" value="" placeholder="Укажите фамилию *" required>
             </div>
-            <div><label class="form__title" for="username">Имя:</label>
-            <input class="form__field" type="text" name="name" id="username" value="" placeholder="Введите ваше имя *" required>
+            <div class="form__item-name">
+              <label class="form__title" for="username">Имя:</label>
+              <input class="form__field" type="text" name="name" id="username" value="" placeholder="Введите ваше имя *" required>
             </div>
-            <div><label class="form__title" for="patronymic">Отчество:</label>
-            <input class="form__field" type="text" name="patronymic" id="patronymic" value="" placeholder="Ну и отчество тоже">
+            <div class="form__item-name">
+              <label class="form__title" for="patronymic">Отчество:</label>
+              <input class="form__field" type="text" name="patronymic" id="patronymic" value="" placeholder="Ну и отчество тоже">
             </div>
           </div>
+
           <fieldset class="form__filter progress">
             <legend class="form__filter-title">Ваши безбашенные достижения в путешествии</legend>
               <ul class="form__filter-list progress__list">
@@ -108,13 +112,13 @@
           </fieldset>
 
           <fieldset class="form__container form__container--contacts">
-            <legend class="form__container-title form__container-invisible">Контактная информация</legend>
+            <legend class="form__title form__container--hidden">Контактная информация</legend>
             <div>
-              <div class="form__container-tel form__container--item">
+              <div class="form__container-tel form__item">
                 <label class="form__title" for="phone-number">Номер телефона</label>
                 <input class="form__field" type="text" name="phone-number"  id="phone-number" value="" placeholder="Номер, пожалуйста">
               </div>
-              <div class="form__container-mail form__container--item">
+              <div class="form__container-mail form__item">
                 <label class="form__title" for="e-mail">Адрес почты</label>
                 <input class="form__field" type="text" name="e-mail" id="e-mail" value="" placeholder="Введите почту *" required>
               </div>
@@ -122,7 +126,7 @@
           </fieldset>
 
           <fieldset class="form__filter form__filter--apps">
-            <legend class="form__filter-title">С каким приложением путешествовали?:</legend>
+            <legend class="form__filter-title form__filter-title--apps">С каким приложением путешествовали?</legend>
               <ul class="form__filter-list apps-travel">
                 <li class="form__filter-item apps-travel__item">
                   <input class="visually-hidden form__filter-radio" type="radio" name="iOS" id="iOS" checked>
@@ -139,15 +143,14 @@
               </ul>
           </fieldset>
 
-          <fieldset class="form__container form__comment">
-            <legend class="form__container-title"><label for="comment">Опишите свои эмоции</label></legend>
+          <fieldset class="form__container form__container--comment">
+            <legend class="form__title form__title--comment"><label for="comment">Опишите свои эмоции</label></legend>
             <p><textarea class="form__container-text" id="comment" name="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea></p>
           </fieldset>
 
           <div class="form__button">
             <button class="button" type="submit">Отправить форму</button>
-
-            <p class="form__content"><span class="form__color">*</span> — обязательные <span class="form__unvisible">для заполнения </span>поля</p>
+            <p class="form__content"><span class="form__color">*</span> — обязательные <span class="form__hidden">для заполнения </span>поля</p>
           </div>
         </form>
 

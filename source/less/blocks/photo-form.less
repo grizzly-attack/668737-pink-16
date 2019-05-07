@@ -1,125 +1,38 @@
-.photo-form {
-  background-color: @bg-light-grey;
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 28px;
-  }
-}
-
 .photo-form__container {
+  padding-top: 20px;
+
   display: flex;
-  .padding;
-  padding-top: 19px;
-  width: 280px;
   flex-wrap: wrap;
+  box-sizing: border-box;
 
-  @media (min-width: @tablet-width) {
-    justify-content: space-between;
-
-    padding-top: 38px;
-    flex-wrap: nowrap;
-
-    width: 620px;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-color: @bg-light-grey;
-
-    padding-top: 40px;
-    padding-left: 90px;
-    padding-right: 50px;
-    width: 940px;
-
-    box-sizing: border-box;
-  }
-}
-
-.photo-form__settings {
-  width: 280px;
-
-  @media (min-width: @desktop-width) {
-    width: 414px;
-  }
+  background-color: @bg-light-grey;
 }
 
 .photo-form__photo {
   margin: 0;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 19px;
-    width: 300px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 18px;
-    width: 300px;
-  }
-}
-
-.photo-form__photo img {
-  @media (min-width: @tablet-width) {
-    width: 300px;
-    height: 400px;
-  }
+  .padding;
+  line-height: 0;
 }
 
 .photo-form__list {
-  list-style: none;
+  .list-reset;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 28px 35px;
-  padding-bottom: 122px;
-  margin: 0;
+  padding: 40px 55px;
+  padding-bottom: 62px;
 
-  width: 210px;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 0;
-    padding-left: 0;
-
-    flex-direction: column;
-    align-items: stretch;
-
-    width: 260px;
-    padding-bottom: 65px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 146px;
-  }
+  border-bottom: solid 1px #818181;
 }
 
 .photo-form__item {
   position: relative;
-
-  padding: 0;
-  margin: 0;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 12px;
-    padding-bottom: 6px;
-
-    width: 275px;
-    border-bottom: 1px solid #818181;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 12px;
-    padding-bottom: 6px;
-    width: 410px;
-  }
-}
-
-.photo-form__item p {
-  margin: 0;
-}
-
-.photo-form__editing-crop {
-  cursor: pointer;
-
   width: 48px;
+}
+
+.photo-form__editing {
+  cursor: pointer;
 
   fill: rgba(40, 54, 69, 0.3);
 
@@ -129,56 +42,28 @@
   }
 }
 
-.photo-form__editing-crop-active {
+.photo-form__editing--crop {
+  width: 48px;
+}
+
+.photo-form__editing--active {
   fill: #d22856;
 }
 
-.photo-form__editing-fill {
-  cursor: pointer;
-
+.photo-form__editing--fill {
   width: 48px;
-
-  fill: rgba(40, 54, 69, 0.3);
-
-  &:hover,
-  &:focus {
-    fill: rgba(40, 54, 69, 0.5);
-  }
-
-  @media (min-width: @tablet-width) {
-    fill: #d22856;
-  }
 }
 
-.photo-form__editing-contrast {
-  cursor: pointer;
-
-  width: 48px;
-
-  padding-top: 8px;
-  padding-bottom: 8px;
-
-  fill: rgba(40, 54, 69, 0.3);
-
-  &:hover,
-  &:focus {
-    fill: rgba(40, 54, 69, 0.5);
-  }
-
-  @media (min-width: @tablet-width) {
-    fill: #d22856;
-  }
-}
-
-.photo-form__editing-contrast path {
-  fill: rgba(40, 54, 69, 0.3);
+.photo-form__editing--contrast {
+  width: 32px;
+  padding: 8px 4px;
 }
 
 .photo-form__runner {
   position: absolute;
   margin: 0;
 
-  top: 84px;
+  top: 85px;
   left: -17px;
 
   width: 240px;
@@ -193,39 +78,14 @@
 
     background-color: #f2f2f2;
     top: -7px;
-    right: 33px;
+    right: 32px;
 
     border-radius: 50%;
     border: 2px solid #d22856;
 
     box-sizing: border-box;
-  }
 
-  @media (min-width: @tablet-width) {
-    width: 202px;
-
-    top: 36px;
-    left: 60px;
-
-    &::before {
-      width: 14px;
-      height: 14px;
-
-      top: -6px;
-      right: 42px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 288px;
-    left: 97px;
-
-    &::before {
-      width: 14px;
-      height: 14px;
-
-      left: 70px;
-    }
+    cursor: pointer;
   }
 }
 
@@ -233,47 +93,13 @@
   background-color: #d22856;
 }
 
-.photo-form__runner--unvisible {
+.photo-form__runner--hidden {
   display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-  }
 }
 
 .photo-form__button-container {
-  margin: 0;
-  padding: 0;
-  padding-top: 37px;
-  padding-bottom: 30px;
-
-  list-style: none;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 320px;
-    height: 1px;
-
-    top: 0;
-    left: -20px;
-
-    background-color: #818181;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding-top: 0;
-
-    &::before {
-      display: none;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
-  }
+  .list-reset;
+  padding: 40px 20px;
 }
 
 .photo-form__button {
@@ -285,27 +111,6 @@
 
   font-size: 18px;
   font-weight: 700;
-
-  @media (min-width: @tablet-width) {
-    margin-left: 5px;
-    width: 260px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 183px;
-  }
-}
-
-.photo-form__button-container li {
-  padding-bottom: 13px;
-
-  @media (min-width: @tablet-width) {
-    padding-bottom: 25px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 0;
-  }
 }
 
 .photo-form__button-post {
@@ -328,6 +133,10 @@
   }
 }
 
+.photo-form__button--post {
+  margin-bottom: 13px;
+}
+
 .photo-form__button-cancel {
   color: rgba(40, 54, 69, 0.1);
 
@@ -347,5 +156,211 @@
   &:active {
     background-color: rgba(40, 54, 69, 0.3);
     color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .photo-form__container {
+    .padding;
+    padding-top: 57px;
+    padding-bottom: 54px;
+
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    width: 660px;
+  }
+
+  .photo-form__photo {
+    padding: 0;
+    width: 300px;
+  }
+
+  .photo-form__photo img {
+    width: 300px;
+    height: 400px;
+  }
+
+  .photo-form__list {
+    padding: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 273px;
+    padding-bottom: 67px;
+    border: none;
+  }
+
+  .photo-form__item {
+    padding-top: 23px;
+    padding-bottom: 15px;
+
+    width: 275px;
+    border-bottom: 1px solid #818181;
+
+    &:nth-child(1) {
+      padding-top: 9px;
+    }
+  }
+
+  .photo-form__editing {
+    fill: #d22856;
+    height: auto;
+  }
+
+  .photo-form__editing--fill {
+    padding-top: 2px;
+    width: 25px;
+  }
+
+  .photo-form__editing--crop {
+    width: 23px;
+  }
+
+  .photo-form__editing--contrast {
+    width: 16px;
+    padding: 0 5px;
+  }
+
+  .photo-form__runner {
+    width: 202px;
+
+    top: auto;
+    bottom: 35px;
+    left: 53px;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+
+      top: -6px;
+    }
+  }
+
+  .photo-form__runner--fill::before {
+    left: 25px;
+  }
+
+  .photo-form__runner--crop::before {
+    right: 42px;
+  }
+
+  .photo-form__runner--contrast::before {
+    right: 92px;
+  }
+
+  .photo-form__runner--hidden {
+    display: block;
+  }
+
+  .photo-form__button-container {
+    padding: 0;
+  }
+
+  .photo-form__button {
+    width: 260px;
+  }
+
+  .photo-form__button--post {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-form {
+    padding-bottom: 28px;
+  }
+
+  .photo-form__container {
+    margin: 0 10px;
+    padding-top: 55px;
+    padding-left: 80px;
+    padding-right: 55px;
+    padding-bottom: 34px;
+    width: 940px;
+  }
+
+  .photo-form__settings {
+    width: 415px;
+  }
+
+  .photo-form__photo {
+    width: 300px;
+
+    padding-top: 3px;
+  }
+
+  .photo-form__list {
+    padding-bottom: 146px;
+    width: 415px;
+  }
+
+  .photo-form__item {
+    padding-top: 15px;
+    padding-bottom: 13px;
+    width: 410px;
+    line-height: 0;
+
+    &:nth-child(1) {
+      padding-top: 0;
+      padding-bottom: 9px;
+    }
+  }
+
+  .photo-form__editing {
+    fill: #d22856;
+    height: auto;
+  }
+
+  .photo-form__editing--fill {
+    padding-top: 2px;
+    width: 48px;
+  }
+
+  .photo-form__editing--crop {
+    width: 48px;
+  }
+
+  .photo-form__editing--contrast {
+    width: 33px;
+    padding: 4px 5px;
+  }
+
+  .photo-form__runner {
+    width: 288px;
+    left: 92px;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .photo-form__runner--fill::before {
+    left: 247px;
+  }
+
+  .photo-form__runner--crop::before {
+    left: 71px;
+  }
+
+  .photo-form__runner--contrast::before {
+    left: 160px;
+  }
+
+  .photo-form__button-container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 410px;
+  }
+
+  .photo-form__button {
+    width: 183px;
+  }
+
+  .photo-form__button--post {
+    padding-bottom: 0;
   }
 }
