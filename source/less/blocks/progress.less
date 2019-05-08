@@ -1,3 +1,7 @@
+.progress__list {
+  .list-reset;
+}
+
 .progress__item {
   padding-bottom: 52px;
 
@@ -9,8 +13,12 @@
 @media (min-width: @tablet-width) {
   .progress {
     margin-top: 57px;
+  }
 
-    padding-bottom: 4px;
+  .progress__list {
+    padding-top: 47px;
+    padding-left: 30px;
+    padding-bottom: 6px;
   }
 }
 
@@ -25,6 +33,11 @@
 
     &:first-child {
       order: -1;
+      padding-right: 20px;
+    }
+
+    &:nth-child(2) {
+      padding-right: 20px;
     }
 
     &:nth-child(3) {

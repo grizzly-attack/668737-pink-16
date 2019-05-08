@@ -28,18 +28,6 @@
   }
 }
 
-.form__title {
-  color: #d22856;
-  text-transform: uppercase;
-
-  margin: 0;
-  padding-left: 22px;
-  padding-top: 18px;
-  padding-bottom: 5px;
-
-  display: block;
-}
-
 .form__filter {
   border: none;
 
@@ -54,26 +42,6 @@
 
 .form__filter--apps {
   margin-top: -70px;
-}
-
-.form__filter-title {
-  color: #d22856;
-  text-align: center;
-  line-height: 18px;
-  text-transform: uppercase;
-
-  padding: 20px;
-  padding-top: 150px;
-  padding-bottom: 43px;
-}
-
-.form__filter-title--apps {
-  padding-top: 150px;
-  padding-bottom: 40px;
-}
-
-.form__filter-list {
-  .list-reset;
 }
 
 .form__filter-item {
@@ -190,21 +158,13 @@
   display: none;
 }
 
-.form__container--contacts {
+.form__contacts {
   margin-top: 14px;
 }
 
 .form__container--comment {
   .padding;
   margin-top: -70px;
-}
-
-.form__title--comment {
-  .padding;
-  padding-top: 100px;
-  padding-bottom: 10px;
-
-  text-align: center;
 }
 
 .form__container-text {
@@ -231,8 +191,53 @@
   box-sizing: border-box;
 }
 
+.form__title-item {
+  color: #d22856;
+  text-transform: uppercase;
+  margin: 0;
+  display: block;
+}
 
-.form__container--hidden {
+.form__title-item--contacts {
+  padding-left: 21px;
+  padding-top: 19px;
+  padding-bottom: 4px;
+}
+
+.form__title-item--name {
+  padding-left: 22px;
+  padding-top: 18px;
+  padding-bottom: 5px;
+}
+
+.form__title-field {
+  color: #d22856;
+  text-align: center;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.form__title-field--progress {
+  padding: 20px;
+  padding-top: 150px;
+  padding-bottom: 43px;
+}
+
+.form__title-field--apps {
+  padding-top: 150px;
+  padding-bottom: 40px;
+}
+
+.form__title-field--comment {
+  .padding;
+  padding-top: 107px;
+  padding-bottom: 16px;
+
+  text-align: center;
+}
+
+.form__title-field--contacts {
   display: none;
 }
 
@@ -256,22 +261,19 @@
     width: 620px;
 
     &:last-child {
-      margin-bottom: 57px;
+      margin-bottom: 55px;
     }
   }
 
-  .form__container--contacts {
+  .form__contacts {
     order: -1;
 
     border: solid 2px #e5e5e5;
 
-    margin-top: 58px;
+    margin-top: 55px;
+    padding: 0 18px;
     padding-top: 38px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 11px;
-
-    width: 580px;
+    padding-bottom: 13px;
   }
 
   .form__item {
@@ -291,7 +293,7 @@
 
       position: absolute;
 
-      width: 60px;
+      width: 63px;
       height: 60px;
       top: 0;
       right: 40px;
@@ -305,7 +307,11 @@
     }
   }
 
-  .form__container-tel::after {
+  .form__title-item--contacts {
+    padding-top: 9px;
+  }
+
+  .form__tel::after {
     content: "";
 
     position: absolute;
@@ -323,7 +329,7 @@
     background-repeat: no-repeat;
   }
 
-  .form__container-mail::after {
+  .form__mail::after {
     content: "";
 
     position: absolute;
@@ -341,32 +347,15 @@
     background-repeat: no-repeat;
   }
 
-  .form__container--contacts .form__title {
-    padding-left: 17px;
-    padding-top: 10px;
-  }
-
-  .form__container-invisible {
-    display: block;
-  }
-
   .form__field {
     width: 100%;
 
     padding-bottom: 15px;
   }
 
-  .form__container--contacts .form__field {
+  .form__field--contacts {
     order: -1;
-    width: 496px;
-  }
-
-  .form__title {
-    padding-left: 0;
-    padding-right: 19px;
-    padding-bottom: 6px;
-
-    display: inline;
+    width: 500px;
   }
 
   .form__filter {
@@ -377,40 +366,16 @@
 
     margin-top: 0;
     border: solid #e5e5e5 2px;
-    width: 616px;
+    width: 620px;
   }
 
   .form__filter--apps {
     order: -2;
+
     margin-top: 0;
-    width: 620px;
+    padding: 0 50px;
 
     box-sizing: border-box;
-  }
-
-  .form__filter--apps .form__filter-list {
-    padding-left: 18px;
-  }
-
-  .form__filter-title {
-    padding: 40px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .form__filter--apps .form__filter-title {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .form__container-title {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .form__filter-list {
-    padding: 42px 20px;
-    padding-bottom: 13px;
   }
 
   .form__filter-checkbox + label::before {
@@ -439,22 +404,14 @@
     padding-bottom: 0;
   }
 
-  .form__comment {
-    margin-top: 60px;
+  .form__container--comment {
+    margin-top: 58px;
 
     border: solid 2px #e5e5e5;
     box-sizing: border-box;
 
     padding: 36px 55px;
     padding-bottom: 42px;
-  }
-
-  .form__comment .form__container-title {
-    padding-top: 0;
-    padding-bottom: 0;
-
-    padding-left: 40px;
-    padding-right: 40px;
   }
 
   .form__container-text {
@@ -472,10 +429,38 @@
     margin-top: 0;
     padding: 0;
     padding-top: 68px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
+  }
+
+  .form__title-item--name {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+
+  .form__title-field--apps {
+    padding: 0 25px;
+    padding-top: 2px;
+  }
+
+  .form__title-field--contacts {
+    display: inline;
+    padding: 0 27px;
+  }
+
+  .form__title-field--progress {
+    padding: 33px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .form__title-field--comment {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-
 
 /*desktop*/
 
@@ -490,19 +475,17 @@
     width: 435px;
 
     padding-top: 14px;
-    margin: 0;
   }
 
-  .form__container--name div {
+  .form__item-name {
     width: 435px;
-    padding-bottom: 54px;
 
     &:last-child {
-      padding-bottom: 58px;
+      margin-bottom: 56px;
     }
   }
 
-  .form__container--contacts {
+  .form__contacts {
     width: 940px;
 
     margin: 0;
@@ -512,15 +495,15 @@
     box-sizing: border-box;
   }
 
-  .form__container--contacts div {
+  .form__contacts-list {
     display: flex;
     justify-content: space-between;
 
     width: auto;
-    padding: 0 55px;
+    padding: 0 57px;
   }
 
-  .form__container--contacts .form__container--item {
+  .form__item {
     width: 375px;
     flex-direction: column;
     align-items: flex-start;
@@ -530,34 +513,29 @@
 
     &::before {
       right: 0;
+      width: 60px;
     }
   }
 
-  .form__container-tel::after {
-    right: 22px;
+  .form__tel::after {
+    right: 21px;
+    top: 23px;
   }
 
-  .form__container-mail::after {
-    right: 22px;
+  .form__mail::after {
+    right: 24px;
   }
 
   .form__container--item {
     width: 371px;
   }
 
-  .form__container--contacts .form__field {
+  .form__title-item--contacts {
+    padding-top: 11px;
+  }
+
+  .form__field--contacts {
     width: 375px;
-  }
-
-  .form__title {
-    font-size: 14px;
-    padding-bottom: 5px;
-  }
-
-  .form__filter {
-    width: auto;
-
-    background-color: transparent;
   }
 
   .form__filter--apps {
@@ -565,41 +543,13 @@
 
     padding-right: 20px;
     padding-left: 42px;
-    padding-bottom: 10px;
-  }
-
-  .form__filter--apps .form__filter-list {
-    padding-left: 22px;
-  }
-
-  .form__filter-title {
-    padding: 0 20px;
-    font-size: 14px;
-  }
-
-  .form__container-title {
-    padding: 0 20px;
-    font-size: 14px;
-  }
-
-  .form__filter-list {
-    padding-top: 45px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-bottom: 0;
   }
 
   .form__filter-item {
     padding-left: 70px;
 
     padding-right: 0;
-  }
-
-  .form__content {
-    font-size: 14px;
-  }
-
-  .form__unvisible {
-    display: inline;
   }
 
   .form__comment {
@@ -619,10 +569,41 @@
 
   .form__button {
     width: 940px;
-    padding-top: 65px;
+    padding-top: 64px;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
     margin-top: 0;
+  }
+
+  .form__title-item {
+    font-size: 14px;
+  }
+
+  .form__title-field {
+    font-size: 14px;
+  }
+
+  .form__title-field--apps {
+    padding-top: 0;
+  }
+
+  .form__title-field--contacts {
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .form__filter-checkbox:checked + label::after {
+    top: 6px;
+  }
+
+  .form__container--comment {
+    margin-top: 56px;
+    padding-bottom: 38px;
+  }
+
+  .form__hidden {
+    display: inline;
   }
 }

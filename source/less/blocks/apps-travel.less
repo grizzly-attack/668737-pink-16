@@ -1,17 +1,27 @@
-.apps-travel {
-  @media (min-width: @tablet-width) {
-    padding-left: 50px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 70px;
-  }
-}
-
 .apps-travel__item {
   padding-bottom: 45px;
 
   &:last-child {
     padding-bottom: 36px;
+  }
+}
+
+.apps-travel {
+  .list-reset;
+}
+
+@media (min-width: @tablet-width) {
+  .apps-travel {
+    padding: 0;
+    padding-top: 48px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .apps-travel {
+    padding-left: 23px;
+    padding-top: 50px;
+    padding-bottom: 23px;
   }
 }
