@@ -1,15 +1,6 @@
-.progress {
-  @media (min-width: @tablet-width) {
-    margin-top: 57px;
-
-    padding-bottom: 4px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
-  }
+.progress__list {
+  .list-reset;
 }
-
 
 .progress__item {
   padding-bottom: 52px;
@@ -17,34 +8,48 @@
   &:last-child {
     padding-bottom: 36px;
   }
+}
 
-  @media (min-width: @desktop-width) {
-    padding-right: 0;
-    width: 200px;
+@media (min-width: @tablet-width) {
+  .progress {
+    margin-top: 57px;
   }
 
-  &:first-child {
-    @media (min-width: @desktop-width) {
-      order: -1;
-    }
-  }
-
-  &:nth-child(3) {
-    @media (min-width: @desktop-width) {
-      order: -1;
-    }
-  }
-
-  &:nth-child(5) {
-    @media (min-width: @desktop-width) {
-      order: -1;
-    }
+  .progress__list {
+    padding-top: 47px;
+    padding-left: 30px;
+    padding-bottom: 6px;
   }
 }
 
+@media (min-width: @desktop-width) {
+  .progress {
+    padding: 0;
+  }
 
-.progress__list {
-  @media (min-width: @desktop-width) {
+  .progress__item {
+    padding-right: 0;
+    width: 200px;
+
+    &:first-child {
+      order: -1;
+      padding-right: 20px;
+    }
+
+    &:nth-child(2) {
+      padding-right: 20px;
+    }
+
+    &:nth-child(3) {
+      order: -1;
+    }
+
+    &:nth-child(5) {
+      order: -1;
+    }
+  }
+
+  .progress__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

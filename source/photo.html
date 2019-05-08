@@ -70,135 +70,135 @@
     </div>
   </header>
 
-  <main class="page-main page-main--bg page-main--padding">
+  <main class="page-main page-main--background">
     <div class="wrapper">
       <h1 class="page-main__title page-main__title--photo">Фотографии пользователей</h1>
     </div>
 
-      <section class="user-photo">
-          <h2 class="visually-hidden">Фотографии с комментариями</h2>
-          <div class="user-photo__content wrapper">
-            <p class="user-photo__content--inline">Взгляните на фотографии, которые выкладывают пользователи!</p>
-            Видите, как не хватает ваших?
+    <section class="user-photo">
+      <h2 class="visually-hidden">Фотографии с комментариями</h2>
+      <div class="wrapper">
+        <p class="user-photo__content">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      </div>
+
+      <div class="user-photo__panorama">
+        <a class="user-photo__panorama-link" href="#">
+          <picture>
+            <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+            <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+            <img  class="user-photo__panorama-photo" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="фото пользователя">
+          </picture>
+        </a>
+
+        <div class="wrapper">
+          <div class="user-photo__panorama-container">
+            <p class="user-photo__username">Анна <span class="user-photo__time">(5 минут назад)</span></p>
+            <p class="user-photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <p class="user-photo__likes user-photo__likes--panorama">Нравится: 215</p>
           </div>
-          <div class="user-photo__panorama">
-            <a class="user-photo__panorama--photo" href="#">
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <ul class="user-photo__list">
+
+          <li class="user-photo__item">
+            <a class="user-photo__link" href="#">
               <picture>
-                <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
-                <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
-                <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="фото пользователя">
+                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                <img class="user-photo__photo" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" width="280" height="180" alt="фото пользователя">
               </picture>
             </a>
-
-            <div class="wrapper">
-              <div class="user-photo__panorama-container">
-                <p class="user-photo__username">Анна <span class="user-photo__time">(5 минут назад)</span></p>
-                <p class="user-photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-                <p class="user-photo__likes">Нравится: 215</p>
-              </div>
+            <div class="user-photo__item-container">
+              <p class="user-photo__username">Левон <span class="user-photo__time">(5 часов назад)</span></p>
+              <p class="user-photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <p class="user-photo__likes">Нравится: 356</p>
             </div>
-          <div>
+          </li>
 
-            <div class="wrapper">
-            <ul class="user-photo__list">
-
-            <li class="user-photo__item">
-              <a class="user-photo__photo" href="#">
-                <picture>
-                  <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
-                  <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
-                  <img src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" width="280" height="180" alt="фото пользователя">
-                </picture>
-              </a>
-              <div class="user-photo__item-container">
-                <p class="user-photo__username">Левон <span class="user-photo__time">(5 часов назад)</span></p>
-                <p class="user-photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                <p class="user-photo__likes">Нравится: 356</p>
-              </div>
-            </li>
-
-            <li class="user-photo__item">
-              <a class="user-photo__photo" href="#">
-                <picture>
-                  <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
-                  <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
-                  <img src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" width="280" height="180" alt="фото пользователя">
-                </picture>
-              </a>
-              <div class="user-photo__item-container">
-                <p class="user-photo__username">Антон <span class="user-photo__time">(12 часов назад)</span></p>
-                <p class="user-photo__comment">Соседи будут рады!</p>
-                <p class="user-photo__likes">Нравится: 666</p>
-              </div>
-            </li>
-
-            <li class="user-photo__item">
-              <a class="user-photo__photo" href="#">
-                <picture>
-                  <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
-                  <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
-                  <img src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" width="280" height="180" alt="фото пользователя">
-                </picture>
-              </a>
-              <div class="user-photo__item-container">
-                <p class="user-photo__username">Борис <span class="user-photo__time">(20 часов назад)</span></p>
-                <p class="user-photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-                <p class="user-photo__likes">Нравится: 215</p>
-              </div>
-            </li>
-
-            <li class="user-photo__item">
-              <a class="user-photo__photo" href="#">
-                <picture>
-                  <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
-                  <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
-                  <img src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" width="280" height="180" alt="фото пользователя">
-                </picture>
-              </a>
-              <div class="user-photo__item-container">
-                <p class="user-photo__username">Сергей <span class="user-photo__time">(25 часов назад)</span></p>
-                <p class="user-photo__comment">Самая кубанская в мире!</p>
-                <p class="user-photo__likes">Нравится: 4</p>
-              </div>
-            </li>
-
-            <li class="user-photo__item">
-              <a class="user-photo__photo" href="#">
-                <picture>
-                  <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
-                  <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
-                  <img src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" width="280" height="180" alt="фото пользователя">
-                </picture>
-              </a>
-              <div class="user-photo__item-container">
-                <p class="user-photo__username">Максим <span class="user-photo__time">(40 часов назад)</span></p>
-                <p class="user-photo__comment">Где снег-то?</p>
-                <p class="user-photo__likes">Нравится: 150</p>
-              </div>
-            </li>
-
-            <li class="user-photo__item">
-              <a class="user-photo__photo" href="#">
-                <picture>
-                  <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
-                  <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
-                  <img src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" width="280" height="180" alt="фото пользователя">
-                </picture>
-              </a>
-              <div class="user-photo__item-container">
-                <p class="user-photo__username">Надежда <span class="user-photo__time">(45 часов назад)</span></p>
-                <p class="user-photo__comment">Всем GM и взаимные лайки!</p>
-                <p class="user-photo__likes">Нравится: 2560</p>
-              </div>
-            </li>
-          </ul>
-
-            <div class="user-photo__content user-photo__content--padding">
-              <p>Затмите их всех!</p>
-              <p>Выкладывайте все, что накопилось в телефоне!</p>
+          <li class="user-photo__item">
+            <a class="user-photo__link" href="#">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                <img class="user-photo__photo" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" width="280" height="180" alt="фото пользователя">
+              </picture>
+            </a>
+            <div class="user-photo__item-container">
+              <p class="user-photo__username">Антон <span class="user-photo__time">(12 часов назад)</span></p>
+              <p class="user-photo__comment">Соседи будут рады!</p>
+              <p class="user-photo__likes">Нравится: 666</p>
             </div>
-          </div>
-        </section>
+          </li>
+
+          <li class="user-photo__item">
+            <a class="user-photo__link" href="#">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                <img class="user-photo__photo" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" width="280" height="180" alt="фото пользователя">
+              </picture>
+            </a>
+            <div class="user-photo__item-container">
+              <p class="user-photo__username">Борис <span class="user-photo__time">(20 часов назад)</span></p>
+              <p class="user-photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <p class="user-photo__likes">Нравится: 215</p>
+            </div>
+          </li>
+
+          <li class="user-photo__item">
+            <a class="user-photo__link" href="#">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                <img class="user-photo__photo" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" width="280" height="180" alt="фото пользователя">
+              </picture>
+            </a>
+            <div class="user-photo__item-container">
+              <p class="user-photo__username">Сергей <span class="user-photo__time">(25 часов назад)</span></p>
+              <p class="user-photo__comment">Самая кубанская в мире!</p>
+              <p class="user-photo__likes">Нравится: 4</p>
+            </div>
+          </li>
+
+          <li class="user-photo__item">
+            <a class="user-photo__link" href="#">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                <img class="user-photo__photo" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" width="280" height="180" alt="фото пользователя">
+              </picture>
+            </a>
+            <div class="user-photo__item-container">
+              <p class="user-photo__username">Максим <span class="user-photo__time">(40 часов назад)</span></p>
+              <p class="user-photo__comment">Где снег-то?</p>
+              <p class="user-photo__likes">Нравится: 150</p>
+            </div>
+          </li>
+
+          <li class="user-photo__item">
+            <a class="user-photo__link" href="#">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                <img class="user-photo__photo" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" width="280" height="180" alt="фото пользователя">
+              </picture>
+            </a>
+            <div class="user-photo__item-container">
+              <p class="user-photo__username">Надежда <span class="user-photo__time">(45 часов назад)</span></p>
+              <p class="user-photo__comment">Всем GM и взаимные лайки!</p>
+              <p class="user-photo__likes">Нравится: 2560</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="user-photo__content user-photo__content--padding">
+          <p>Затмите их всех!</p>
+          <p>Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+      </div>
+    </section>
 
     <section class="photo-form wrapper">
       <h2 class="visually-hidden">Форма для загрузки фото</h2>
@@ -214,30 +214,24 @@
           <div class="photo-form__settings">
             <ul class="photo-form__list">
               <li class="photo-form__item">
-                <p>
-                  <span class="visually-hidden">Кадрирование</span>
-                  <svg class="photo-form__editing-crop photo-form__editing-crop-active" width="48" height="48"><use xlink:href="#editor-crop"></use></svg>
-                </p>
-                <p class="photo-form__runner"></p>
+                <span class="visually-hidden">Кадрирование</span>
+                <svg class="photo-form__editing photo-form__editing--crop photo-form__editing--active" width="48" height="48"><use xlink:href="#editor-crop"></use></svg>
+                <p class="photo-form__runner photo-form__runner--crop"></p>
               </li>
               <li class="photo-form__item">
-                <p>
-                  <span class="visually-hidden">Заливка</span>
-                  <svg class="photo-form__editing-fill" width="48" height="43"><use xlink:href="#editor-fill"></use></svg>
-                </p>
-                <p class="photo-form__runner photo-form__runner--unvisible"></p>
+                <span class="visually-hidden">Заливка</span>
+                <svg class="photo-form__editing photo-form__editing--fill" width="48" height="43"><use xlink:href="#editor-fill"></use></svg>
+                <p class="photo-form__runner photo-form__runner--fill photo-form__runner--hidden"></p>
               </li>
               <li class="photo-form__item">
-                <p>
-                  <span class="visually-hidden">Констраст</span>
-                  <svg class="photo-form__editing-contrast" width="32" height="32"><use xlink:href="#editor-contrast"></use></svg>
-                </p>
-                <p class="photo-form__runner photo-form__runner--unvisible"></p>
+                <span class="visually-hidden">Констраст</span>
+                <svg class="photo-form__editing photo-form__editing--contrast" width="32" height="32"><use xlink:href="#editor-contrast"></use></svg>
+                <p class="photo-form__runner photo-form__runner--contrast photo-form__runner--hidden"></p>
               </li>
             </ul>
 
             <ul class="photo-form__button-container">
-              <li><button class="photo-form__button photo-form__button-post" type="submit">Запостить</button></li>
+              <li class="photo-form__button--post"><button class="photo-form__button photo-form__button-post" type="submit">Запостить</button></li>
               <li><button class="photo-form__button photo-form__button-cancel" type="reset">Отмена</button></li>
             </ul>
           </div>
