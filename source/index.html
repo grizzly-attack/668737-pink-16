@@ -138,9 +138,9 @@
             </div>
 
             <div class="reviews__controls slider__controls">
-                <i class="slider__control slider__control--active"></i>
+                <i class="slider__control slider__control--active reviews__control"></i>
                 <i class="slider__control"></i>
-                <i class="slider__control"></i>
+                <i class="slider__control reviews__control"></i>
             </div>
           </div>
         </div>
@@ -201,8 +201,8 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="wrapper">
-          <div class="contacts__content">
+        <div class="contacts__content">
+          <div class="wrapper">
             <p>Остались вопросы?</p>
             <p>Свяжитесь с нами!</p>
           </div>
@@ -231,33 +231,35 @@
 
           <p class="contacts__map">
             <picture>
-              <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg">
-              <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg">
-              <img src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Адрес офиса">
+              <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+              <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="645" alt="Адрес офиса">
             </picture>
           </p>
 
       </section>
     </main>
 
-    <footer class="page-footer wrapper">
-      <div class="page-footer__hidden">
-        <div class="page-footer__container">
-          <a class="page-footer__logo" href="index.html">
-            <svg class="page-footer__logo-image" width="147" height="40"><use xlink:href="#logo-footer"></use></svg>
-          </a>
-
-          <ul class="page-footer__social social-list">
-            <li class="social-list__item social-list__item--tw"><a class="social-list__link" href="#"><span class="visually-hidden">Twitter</span></a></li>
-            <li class="social-list__item social-list__item--fb"><a class="social-list__link" href="#"><span class="visually-hidden">Facebook</span></a></li>
-            <li class="social-list__item social-list__item--youtube"><a class="social-list__link" href="#"><span class="visually-hidden">Youtube</a></span></li>
-          </ul>
-
-          <p class="page-footer__copyright">Разработано
-            <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-              <svg class="page-footer__copyright-logo" width="27" height="34"><use xlink:href="#logo-htmlacademy"></use></svg>
+    <footer class="page-footer">
+      <div class="wrapper">
+        <div class="page-footer__hidden">
+          <div class="page-footer__container">
+            <a class="page-footer__logo" href="index.html">
+              <svg class="page-footer__logo-image" width="147" height="40"><use xlink:href="#logo-footer"></use></svg>
             </a>
-          </p>
+
+            <ul class="page-footer__social social-list">
+              <li class="social-list__item social-list__item--tw"><a class="social-list__link" href="#"><span class="visually-hidden">Twitter</span></a></li>
+              <li class="social-list__item social-list__item--fb"><a class="social-list__link" href="#"><span class="visually-hidden">Facebook</span></a></li>
+              <li class="social-list__item social-list__item--youtube"><a class="social-list__link" href="#"><span class="visually-hidden">Youtube</a></span></li>
+            </ul>
+
+            <p class="page-footer__copyright">Разработано
+              <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+                <svg class="page-footer__copyright-logo" width="27" height="34"><use xlink:href="#logo-htmlacademy"></use></svg>
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

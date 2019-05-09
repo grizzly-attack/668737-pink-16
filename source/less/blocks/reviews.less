@@ -101,56 +101,6 @@
     position: relative;
 
     padding-bottom: 5px;
-
-    &::before {
-      content: "";
-
-      position: absolute;
-
-      width: 22px;
-      height: 41px;
-
-      background-image: url("../img/icon-review-arrow-left.svg");
-      background-size: 22px auto;
-      background-position: 0 0;
-      background-repeat: no-repeat;
-
-      top: 30px;
-      left: 10px;
-
-      opacity: 0.3;
-      cursor: pointer;
-    }
-
-    &::after {
-      content: "";
-
-      position: absolute;
-
-      width: 22px;
-      height: 41px;
-
-      background-image: url("../img/icon-review-arrow-right.svg");
-      background-size: 22px auto;
-      background-position: 0 0;
-      background-repeat: no-repeat;
-
-      top: 30px;
-      right: 10px;
-
-      opacity: 0.3;
-      cursor: pointer;
-    }
-  }
-
-  .reviews__item:hover::before,
-  .reviews__item:hover::after {
-    opacity: 1;
-  }
-
-  .reviews__item:active::before,
-  .reviews__item:active::after {
-    opacity: 0.1;
   }
 
   .reviews__text {
@@ -162,5 +112,9 @@
   .reviews__author-name {
     font-size: 24px;
     padding-top: 37px;
+  }
+
+  .reviews__control {
+    display: block;
   }
 }
