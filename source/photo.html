@@ -200,63 +200,65 @@
       </div>
     </section>
 
-    <section class="photo-form wrapper">
-      <h2 class="visually-hidden">Форма для загрузки фото</h2>
-        <div class="photo-form__container">
-          <p class="photo-form__photo">
-            <picture>
-              <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
-              <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
-              <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="фото пользователя">
-            </picture>
-          </p>
+    <section class="photo-form">
+      <div class="wrapper">
+        <h2 class="visually-hidden">Форма для загрузки фото</h2>
+          <div class="photo-form__container">
+            <p class="photo-form__photo">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+                <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="фото пользователя">
+              </picture>
+            </p>
 
-          <div class="photo-form__settings">
-            <ul class="photo-form__list">
-              <li class="photo-form__item">
-                <span class="visually-hidden">Кадрирование</span>
-                <svg class="photo-form__editing photo-form__editing--crop photo-form__editing--active" width="48" height="48"><use xlink:href="#editor-crop"></use></svg>
-                <p class="photo-form__runner photo-form__runner--crop"></p>
-              </li>
-              <li class="photo-form__item">
-                <span class="visually-hidden">Заливка</span>
-                <svg class="photo-form__editing photo-form__editing--fill" width="48" height="43"><use xlink:href="#editor-fill"></use></svg>
-                <p class="photo-form__runner photo-form__runner--fill photo-form__runner--hidden"></p>
-              </li>
-              <li class="photo-form__item">
-                <span class="visually-hidden">Констраст</span>
-                <svg class="photo-form__editing photo-form__editing--contrast" width="32" height="32"><use xlink:href="#editor-contrast"></use></svg>
-                <p class="photo-form__runner photo-form__runner--contrast photo-form__runner--hidden"></p>
-              </li>
-            </ul>
+            <div class="photo-form__settings">
+              <ul class="photo-form__list">
+                <li class="photo-form__item">
+                  <span class="visually-hidden">Кадрирование</span>
+                  <svg class="photo-form__editing photo-form__editing--crop photo-form__editing--active" width="48" height="48"><use xlink:href="#editor-crop"></use></svg>
+                  <p class="photo-form__runner photo-form__runner--crop"></p>
+                </li>
+                <li class="photo-form__item">
+                  <span class="visually-hidden">Заливка</span>
+                  <svg class="photo-form__editing photo-form__editing--fill" width="48" height="43"><use xlink:href="#editor-fill"></use></svg>
+                  <p class="photo-form__runner photo-form__runner--fill photo-form__runner--hidden"></p>
+                </li>
+                <li class="photo-form__item">
+                  <span class="visually-hidden">Констраст</span>
+                  <svg class="photo-form__editing photo-form__editing--contrast" width="32" height="32"><use xlink:href="#editor-contrast"></use></svg>
+                  <p class="photo-form__runner photo-form__runner--contrast photo-form__runner--hidden"></p>
+                </li>
+              </ul>
 
-            <ul class="photo-form__button-container">
-              <li class="photo-form__button--post"><button class="photo-form__button photo-form__button-post" type="submit">Запостить</button></li>
-              <li><button class="photo-form__button photo-form__button-cancel" type="reset">Отмена</button></li>
-            </ul>
+              <ul class="photo-form__button-container">
+                <li class="photo-form__button--post"><button class="photo-form__button photo-form__button-post" type="submit">Запостить</button></li>
+                <li><button class="photo-form__button photo-form__button-cancel" type="reset">Отмена</button></li>
+              </ul>
+            </div>
           </div>
         </div>
     </section>
   </main>
 
   <footer class="page-footer wrapper">
-    <div class="page-footer__container">
-      <a class="page-footer__logo" href="index.html">
-        <svg class="page-footer__logo-image" width="147" height="40"><use xlink:href="#logo-footer"></use></svg>
-      </a>
-
-      <ul class="page-footer__social social-list">
-        <li class="social-list__item social-list__item--tw"><a class="social-list__link" href="#"><span class="visually-hidden">Twitter</span></a></li>
-        <li class="social-list__item social-list__item--fb"><a class="social-list__link" href="#"><span class="visually-hidden">Facebook</span></a></li>
-        <li class="social-list__item social-list__item--youtube"><a class="social-list__link" href="#"><span class="visually-hidden">Youtube</a></span></li>
-      </ul>
-
-      <p class="page-footer__copyright">Разработано
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="page-footer__copyright-logo" width="27" height="34"><use xlink:href="#logo-htmlacademy"></use></svg>
+      <div class="page-footer__container">
+        <a class="page-footer__logo" href="index.html">
+          <svg class="page-footer__logo-image" width="147" height="40"><use xlink:href="#logo-footer"></use></svg>
         </a>
-      </p>
-    </div>
+
+        <ul class="page-footer__social social-list">
+          <li class="social-list__item social-list__item--tw"><a class="social-list__link" href="#"><span class="visually-hidden">Twitter</span></a></li>
+          <li class="social-list__item social-list__item--fb"><a class="social-list__link" href="#"><span class="visually-hidden">Facebook</span></a></li>
+          <li class="social-list__item social-list__item--youtube"><a class="social-list__link" href="#"><span class="visually-hidden">Youtube</a></span></li>
+        </ul>
+
+        <p class="page-footer__copyright">Разработано
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="page-footer__copyright-logo" width="27" height="34"><use xlink:href="#logo-htmlacademy"></use></svg>
+          </a>
+        </p>
+      </div>
   </footer>
 
   <script>
@@ -294,6 +296,6 @@
   });
   </script>
   -->
-
+    <script src="js/picturefill.js" async></script>
   </body>
 </html>

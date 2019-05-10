@@ -67,4 +67,77 @@
   .slider__controls {
     display: none;
   }
+
+  .slider__controls.reviews__controls {
+    display: block;
+    width: 960px;
+    position: relative;
+  }
+
+  .slider__control:nth-child(2) {
+    display: none;
+  }
+
+  .slider__control::before,
+  .slider__control::after {
+    display: none;
+  }
+
+  .slider__control:nth-child(1) {
+    display: block;
+
+    position: absolute;
+
+    width: 22px;
+    height: 41px;
+
+    background-image: url("../img/icon-review-arrow-left.svg");
+    background-size: 22px auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    border-radius: 0;
+
+    top: -167px;
+    left: 10px;
+
+    opacity: 0.3;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  .slider__control:nth-child(3) {
+    position: absolute;
+
+    width: 22px;
+    height: 41px;
+
+    background-image: url("../img/icon-review-arrow-right.svg");
+    background-size: 22px auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    border-radius: 0;
+
+    top: -167px;
+    right: 5px;
+
+    opacity: 0.3;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
 }
