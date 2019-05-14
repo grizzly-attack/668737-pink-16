@@ -24,6 +24,7 @@
   }
 
   &:focus {
+    outline: none;
     border-color: #d22856;
   }
 }
@@ -32,6 +33,7 @@
   border: none;
 
   background-color: @bg-light-grey;
+  margin: 0;
   margin-top: -93px;
   .padding;
   padding-bottom: 12px;
@@ -164,10 +166,11 @@
 
 .form__container--comment {
   .padding;
+  margin: 0;
   margin-top: -70px;
 }
 
-.form__container-text {
+.form__comment {
   font: inherit;
   font-size: 18px;
 
@@ -178,6 +181,16 @@
   min-height: 163px;
 
   resize: none;
+  border: solid 2px #e5e5e5;
+
+  &:hover {
+    border-color: #283645;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #d22856;
+  }
 }
 
 .form__container--comment p {
@@ -294,8 +307,8 @@
       position: absolute;
 
       width: 63px;
-      height: 60px;
-      top: 0;
+      height: 62px;
+      top: -1px;
       right: 40px;
 
       background-color: #e5e5e5;
@@ -311,7 +324,7 @@
     padding-top: 9px;
   }
 
-  .form__tel::after {
+  .form__item--tel::after {
     content: "";
 
     position: absolute;
@@ -329,7 +342,7 @@
     background-repeat: no-repeat;
   }
 
-  .form__mail::after {
+  .form__item--mail::after {
     content: "";
 
     position: absolute;
@@ -414,7 +427,7 @@
     padding-bottom: 42px;
   }
 
-  .form__container-text {
+  .form__comment {
     width: 460px;
 
     min-height: 153px;
@@ -461,8 +474,6 @@
     padding-right: 40px;
   }
 }
-
-/*desktop*/
 
 @media (min-width: @desktop-width) {
   .form {
@@ -517,12 +528,12 @@
     }
   }
 
-  .form__tel::after {
+  .form__item--tel::after {
     right: 21px;
     top: 23px;
   }
 
-  .form__mail::after {
+  .form__item--mail::after {
     right: 24px;
   }
 
@@ -552,14 +563,14 @@
     padding-right: 0;
   }
 
-  .form__comment {
+  .form__container-comment {
     width: 924px;
 
     padding-bottom: 38px;
     margin-top: 56px;
   }
 
-  .form__container-text {
+  .form__comment {
     width: 824px;
 
     min-height: 124px;
