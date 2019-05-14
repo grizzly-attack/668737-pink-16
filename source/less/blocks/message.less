@@ -1,138 +1,142 @@
 .message {
   width: 320px;
 
-  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
-
-  @media (min-width: @tablet-width) {
-    width: 464px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 784px;
-  }
-}
-
-.message p {
-  margin: 0;
+  position: relative;
 }
 
 .message__title {
-  padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   margin: 0;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-
-  @media (min-width: @tablet-width) {
-    font-size: 30px;
-    line-height: 40px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 26px;
-  }
 }
 
 .message__text {
-  padding: 0;
   margin: 0;
+  padding-top: 20px;
 
   line-height: 24px;
-
-  @media (min-width: @tablet-width) {
-    font-size: 18px;
-  }
 }
 
 .message--error {
   position: absolute;
   left: 0;
-  bottom: 1005px;
+  bottom: 1012px;
 
   z-index: 10;
-
-  @media (min-width: @tablet-width) {
-    left: 95px;
-    bottom: 1610px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 202px;
-    bottom: 858px;
-  }
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .message--send {
   position: absolute;
   left: 0;
-  bottom: 450px;
+  bottom: 447px;
 
   z-index: 10;
-
-  @media (min-width: @tablet-width) {
-    left: 95px;
-    bottom: 1060px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 202px;
-    bottom: 395px;
-  }
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .message__container {
+  background-color: #ffffff;
   margin: 0;
-  padding: 43px 23px 36px 23px;
+  padding: 43px 23px 34px 23px;
   text-align: center;
 
   box-sizing: border-box;
-
-  @media (min-width: @tablet-width) {
-    padding-left: 76px;
-    padding-right: 78px;
-  }
-
-  @media (min-width: @desktop-width) {
-
-    padding-bottom: 64px;
-    padding-left: 190px;
-    padding-right: 190px;
-  }
 }
 
-
-.message__unvisible {
+.message__hidden {
   display: none;
 }
-
 
 .message__button {
   background-color: @bg-light-grey;
   box-sizing: border-box;
-  padding: 52px 20px;
-  padding-top: 48px;
 
-  @media (min-width: @tablet-width) {
+  margin: 0;
+  padding: 50px 20px;
+  padding-top: 48px;
+}
+
+.message__button--error {
+  padding-top: 0;
+  background-color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .message {
+    width: 464px;
+  }
+
+  .message__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .message__text {
+    font-size: 18px;
+  }
+
+  .message--error {
+    left: 100px;
+    bottom: 1610px;
+  }
+
+  .message--send {
+    left: 100px;
+    bottom: 1067px;
+  }
+
+  .message__container {
+    padding-left: 76px;
+    padding-right: 78px;
+  }
+
+  .message__button {
     padding-left: 80px;
     padding-right: 80px;
   }
+}
 
-  @media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
+  .message {
+    width: 784px;
+  }
+
+  .message__title {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 26px;
+  }
+
+  .message--error {
+    left: 87px;
+    bottom: 665px;
+  }
+
+  .message--send {
+    left: 87px;
+    bottom: 205px;
+  }
+
+  .message__container {
+    padding-bottom: 32px;
+    padding-left: 190px;
+    padding-right: 190px;
+
+    min-height: 215px;
+  }
+
+  .message__button {
     padding-top: 47px;
     padding-bottom: 55px;
     padding-left: 242px;
     padding-right: 242px;
   }
-}
 
-.message--error .message__button {
-  padding-top: 0;
-
-  @media (min-width: @desktop-width) {
+  .message__button--error {
     background-color: @bg-light-grey;
 
     padding-top: 47px;
