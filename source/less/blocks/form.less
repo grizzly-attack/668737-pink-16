@@ -175,7 +175,7 @@
   font-size: 18px;
 
   padding: 20px;
-  padding-top: 16px;
+  padding-top: 13px;
 
   width: 236px;
   min-height: 163px;
@@ -228,7 +228,7 @@
   text-align: center;
   line-height: 18px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .form__title-field--progress {
@@ -459,7 +459,7 @@
   }
 
   .form__title-field--contacts {
-    display: inline;
+    display: block;
     padding: 0 27px;
   }
 
@@ -476,6 +476,10 @@
     padding-left: 40px;
     padding-right: 40px;
   }
+}
+
+.form__field--contacts {
+  min-height: 63px;
 }
 
 @media (min-width: @desktop-width) {
@@ -600,12 +604,6 @@
 
   .form__title-field--apps {
     padding-top: 0;
-  }
-
-  .form__title-field--contacts {
-    text-align: center;
-    padding-top: 0;
-    padding-bottom: 0;
   }
 
   .form__filter-checkbox:checked + label::after {

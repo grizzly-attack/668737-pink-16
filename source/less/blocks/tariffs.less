@@ -41,6 +41,7 @@
   text-align: center;
   font-size: 24px;
   font-weight: 300;
+  background-clip: padding-box;
 
   &:nth-child(1) {
     background-color: transparent;
@@ -52,7 +53,7 @@
   }
 }
 
-.tariffs__item-hit::before {
+.tariffs__offer--hit::before {
   content: "";
   width: 74px;
   height: 73px;
@@ -66,9 +67,10 @@
   background-repeat: no-repeat;
 
   position: absolute;
+  z-index: 1;
 }
 
-.tariffs__item-hit::after {
+.tariffs__offer--hit::after {
   content: "хит";
   width: 74px;
   height: 73px;
@@ -81,6 +83,7 @@
   font-size: 14px;
 
   position: absolute;
+  z-index: 1;
 }
 
 .tariffs__offer--hidden {
@@ -106,8 +109,8 @@
   padding-bottom: 15px;
   padding-top: 14px;
   padding-left: 21px;
-
   background-color: #ffffff;
+  background-clip: padding-box;
 
   border: solid #e5e5e5 2px;
 
@@ -136,6 +139,7 @@
 
 .tariffs__options--no {
   position: relative;
+  border: solid #e5e5e5 2px;
 }
 
 .tariffs__options--no::before {
@@ -182,7 +186,7 @@
     width: 25%;
   }
 
-  .tariffs__item-hit::before {
+  .tariffs__offer--hit::before {
     width: 61px;
     height: 61px;
 
@@ -190,7 +194,7 @@
     background-size: 61px auto;
   }
 
-  .tariffs__item-hit::after {
+  .tariffs__offer--hit::after {
     width: 61px;
     height: 61px;
 
@@ -279,7 +283,7 @@
     font-size: 24px;
   }
 
-  .tariffs__item-hit::before {
+  .tariffs__offer--hit::before {
     width: 74px;
     height: 73px;
 
@@ -287,7 +291,7 @@
     background-size: 74px auto;
   }
 
-  .tariffs__item-hit::after {
+  .tariffs__offer--hit::after {
     width: 74px;
     height: 73px;
 

@@ -2,7 +2,7 @@
   background-color: #ffffff;
 }
 
-.photo-form__container {
+.photo-form__wrapper {
   padding-top: 20px;
 
   display: flex;
@@ -63,7 +63,7 @@
   padding: 8px 4px;
 }
 
-.photo-form__runner {
+.photo-form__range {
   position: absolute;
   margin: 0;
 
@@ -73,28 +73,27 @@
   width: 240px;
   height: 2px;
   background-color: #818181;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 15px;
-
-    background-color: #f2f2f2;
-    top: -7px;
-    right: 32px;
-
-    border-radius: 50%;
-    border: 2px solid #d22856;
-
-    box-sizing: border-box;
-
-    cursor: pointer;
-  }
 }
 
-.photo-form__runner:active::before {
-  background-color: #d22856;
+.photo-form__runner {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+
+  background-color: #f2f2f2;
+  top: -7px;
+  right: 32px;
+
+  border-radius: 50%;
+  border: 2px solid #d22856;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  &:active {
+    background-color: #d22856;
+  }
 }
 
 .photo-form__runner--hidden {
@@ -165,7 +164,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .photo-form__container {
+  .photo-form__wrapper {
     .padding;
     padding-top: 57px;
     padding-bottom: 54px;
@@ -217,41 +216,44 @@
   .photo-form__editing--fill {
     padding-top: 2px;
     width: 25px;
+    height: 23px;
   }
 
   .photo-form__editing--crop {
     width: 23px;
+    height: 23px;
   }
 
   .photo-form__editing--contrast {
     width: 16px;
+    height: 16px;
     padding: 2px 5px;
   }
 
-  .photo-form__runner {
+  .photo-form__range {
     width: 202px;
 
     top: auto;
     bottom: 35px;
     left: 53px;
-
-    &::before {
-      width: 14px;
-      height: 14px;
-
-      top: -6px;
-    }
   }
 
-  .photo-form__runner--fill::before {
+  .photo-form__runner {
+    width: 14px;
+    height: 14px;
+
+    top: -6px;
+  }
+
+  .photo-form__runner--fill {
     left: 25px;
   }
 
-  .photo-form__runner--crop::before {
+  .photo-form__runner--crop {
     right: 42px;
   }
 
-  .photo-form__runner--contrast::before {
+  .photo-form__runner--contrast {
     right: 92px;
   }
 
@@ -277,8 +279,7 @@
     padding-bottom: 28px;
   }
 
-  .photo-form__container {
-    margin: 0 10px;
+  .photo-form__wrapper {
     padding-top: 55px;
     padding-left: 80px;
     padding-right: 55px;
@@ -297,7 +298,7 @@
   }
 
   .photo-form__list {
-    padding-bottom: 146px;
+    padding-bottom: 144px;
     width: 415px;
   }
 
@@ -321,36 +322,39 @@
   .photo-form__editing--fill {
     padding-top: 2px;
     width: 48px;
+    height: 45px;
   }
 
   .photo-form__editing--crop {
     width: 48px;
+    height: 48px;
   }
 
   .photo-form__editing--contrast {
     width: 33px;
+    height: 33px;
     padding: 4px 5px;
   }
 
-  .photo-form__runner {
+  .photo-form__range {
     width: 288px;
     left: 92px;
-
-    &::before {
-      width: 14px;
-      height: 14px;
-    }
   }
 
-  .photo-form__runner--fill::before {
+  .photo-form__runner {
+    width: 14px;
+    height: 14px;
+  }
+
+  .photo-form__runner--fill {
     left: 247px;
   }
 
-  .photo-form__runner--crop::before {
+  .photo-form__runner--crop {
     left: 71px;
   }
 
-  .photo-form__runner--contrast::before {
+  .photo-form__runner--contrast {
     left: 160px;
   }
 

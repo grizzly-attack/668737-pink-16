@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -32,7 +35,7 @@
           <polygon fill="#ffffff" points="1200,0 0,0 0,94.074 "/>
       </symbol>
 
-      <symbol width="74" height="22" id="logo-header">
+      <symbol id="logo-header">
         <g class="page-header__logo--mobile">
           <path d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z"/>
           <path d="M21.729,1.288C21.729,0.58,22.308,0,22.983,0c0.709,0,1.288,0.58,1.288,1.288v20.283 c0,0.708-0.579,1.288-1.288,1.288c-0.676,0-1.255-0.58-1.255-1.288V1.288z"/>
@@ -80,7 +83,7 @@
     <header class="page-header">
       <div class="page-header__container">
         <a class="page-header__logo">
-          <svg class="page-header__logo-image page-header__logo-image--index" width="75" height="22"><use xlink:href="#logo-header"></use></svg>
+          <svg class="page-header__logo-image page-header__logo-image--index" width="75" height="22" aria-label="Логотип Pink"><use xlink:href="#logo-header"></use></svg>
         </a>
 
         <nav class="main-nav">
@@ -110,12 +113,12 @@
           <h2 class="visually-hidden">Ссылки для скачивания приложения</h2>
           <div class="app-download__container">
             <p class="app-download__slogan">Взгляните на жизнь иначе!</p>
-            <p class="app-download__iTunes"><a class="app-download__link app-download__link-iTunes" href="#">Скачать приложение</a></p>
-            <ul class="app-download__list">
-              <li class="app-download__item app-download__item--apple"><a class="app-download__link" href="#"><span class="visually-hidden">Скачать приложение для Apple</span></a></li>
-              <li class="app-download__item app-download__item--android"><a class="app-download__link" href="#"><span class="visually-hidden">Скачать приложение для Android</span></a></li>
-              <li class="app-download__item app-download__item--windows"><a class="app-download__link" href="#"><span class="visually-hidden">Скачать приложение для Windows</span></a></li>
-            </ul>
+            <p class="app-download__iTunes"><a class="app-download__link-iTunes" href="https://www.apple.com/ru/itunes/">Скачать приложение</a></p>
+            <div class="app-download__list">
+              <a class="app-download__item app-download__item--apple" href="https://www.apple.com/ru/ios/app-store/"><span class="visually-hidden">Скачать приложение для Apple</span></a>
+              <a class="app-download__item app-download__item--android" href="https://play.google.com/store/apps"><span class="visually-hidden">Скачать приложение для Android</span></a>
+              <a class="app-download__item app-download__item--windows" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone"><span class="visually-hidden">Скачать приложение для Windows</span></a>
+            </div>
             <p class="app-download__content">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
           </div>
         </div>
@@ -123,16 +126,14 @@
 
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
-        <div class="wrapper">
-          <div class="advantages__content-block">
-              <p class="advantages__content">Устали от серости мегаполиса?</p>
-              <p class="advantages__content">Нам есть, что вам предложить!</p>
+          <div class="advantages__content-block wrapper">
+            <p class="advantages__content">Устали от серости мегаполиса?</p>
+            <p class="advantages__content">Нам есть, что вам предложить!</p>
           </div>
-        </div>
 
         <div class="advantages__list-container">
 
-          <svg width="596" height="62"><use xlink:href="#triangle"></use></svg>
+            <svg width="596" height="62"><use xlink:href="#triangle"></use></svg>
 
           <div class="wrapper">
             <ul class="advantages__list">
@@ -142,7 +143,7 @@
               </li>
               <li class="advantages__item">
                 <h3 class="advantages__item-title">Меняет мир вокруг</h3>
-                <p class="advantages__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbspэффект</p>
+                <p class="advantages__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
               </li>
               <li class="advantages__item">
                 <h3 class="advantages__item-title">Заводит новых друзей</h3>
@@ -154,12 +155,11 @@
       </section>
 
       <article class="research">
-        <div  class="wrapper">
-          <div class="research__container">
-              <b class="research__title">Эффект <br>на 24 часа!</b>
-              <p class="research__text">Британские ученые провели исследования и доказали, что&nbspположительный эффект от&nbspиспользования приложения длится целые сутки!</p>
-              <a  class="research__link" href="#">Узнать больше об исследовании</a>
-          </div>
+        <h2 class="visually-hidden">Исследование британских ученых</h2>
+        <div class="research__container wrapper">
+            <p class="research__title">Эффект <br>на 24 часа!</p>
+            <p class="research__text">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
+            <a  class="research__link" href="#">Узнать больше об исследовании</a>
         </div>
       </article>
 
@@ -169,19 +169,27 @@
           <div class="slider">
             <div class="reviews__list">
               <blockquote class="reviews__item">
-                <cite class="reviews__author">
-                  <p class="reviews__author-name">Николай Петров</p>
-                  <p class="reviews__author-about">25 лет, водитель трамвая</p>
-                </cite>
+                <cite class="reviews__author-name">Николай Петров</cite>
+                <p class="reviews__author-about">25 лет, водитель трамвая</p>
+                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </blockquote>
+              <blockquote class="reviews__item reviews__item--hidden">
+                <cite class="reviews__author-name">Николай Петров</cite>
+                <p class="reviews__author-about">25 лет, водитель трамвая</p>
+                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </blockquote>
+              <blockquote class="reviews__item reviews__item--hidden">
+                <cite class="reviews__author-name">Николай Петров</cite>
+                <p class="reviews__author-about">25 лет, водитель трамвая</p>
                 <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
               </blockquote>
             </div>
 
             <div class="reviews__controls slider__controls">
-                <i class="slider__control slider__control--active reviews__control"></i>
-                <i class="slider__control"></i>
-                <i class="slider__control reviews__control"></i>
-            </div>
+              <i class="slider__control slider__control--active reviews__control" aria-label="Переключатель слайдера"></i>
+              <i class="slider__control" aria-label="Переключатель слайдера"></i>
+              <i class="slider__control reviews__control" aria-label="Переключатель слайдера"></i>
+          </div>
           </div>
         </div>
       </section>
@@ -191,86 +199,81 @@
 
         <svg width="596" height="62"><use xlink:href="#triangle"></use></svg>
 
-        <div class="slider">
-          <div class="tariffs__container">
-            <div class="wrapper">
-              <table class="tariffs__table">
-                <tr>
-                  <th class="tariffs__offer tariffs__offer--hidden"></th>
-                  <th class="tariffs__offer">
-                    <h3 class="tariffs__item-title">База</h3>
-                    1,99 USD
-                  </th>
-                  <th class="tariffs__offer">
-                    <h3 class="tariffs__item-title tariffs__item-hit">Стандарт</h3>
-                    3,99 USD
-                  </th>
-                  <th class="tariffs__offer">
-                    <h3 class="tariffs__item-title">АНЛИМ</h3>
-                    9,99 USD
-                  </th>
-                </tr>
-                <tr>
-                  <td class="tariffs__options tariffs__options--hidden">Розовый фильтр</td>
-                  <td class="tariffs__options tariffs__options--yes"><span class="tariffs--visually-hidden">Розовый фильтр</span></td>
-                  <td class="tariffs__options tariffs__options--yes"><span class="tariffs--visually-hidden">Розовый фильтр</span></td>
-                  <td class="tariffs__options tariffs__options--yes"><span class="tariffs--visually-hidden">Розовый фильтр</span></td>
-                </tr>
-                <tr>
-                  <td class="tariffs__options tariffs__options--hidden">Смайлики</td>
-                  <td class="tariffs__options tariffs__options--no"><span class="tariffs--visually-hidden">Смайлики</span></td>
-                  <td class="tariffs__options tariffs__options--yes"><span class="tariffs--visually-hidden">Смайлики</span></td>
-                  <td class="tariffs__options tariffs__options--yes"><span class="tariffs--visually-hidden">Смайлики</span></td>
-                </tr>
-                <tr>
-                  <td class="tariffs__options tariffs__options--hidden">Комментарии</td>
-                  <td class="tariffs__options tariffs__options--no"><span class="tariffs--visually-hidden">Комментарии</span></td>
-                  <td class="tariffs__options tariffs__options--no"><span class="tariffs--visually-hidden">Комментарии</span></td>
-                  <td class="tariffs__options tariffs__options--yes"><span class="tariffs--visually-hidden">Комментарии</span></td>
-                </tr>
-              </table>
-            </div>
+        <div class="slider tariffs__container">
+          <div class="wrapper">
+            <table class="tariffs__table">
+              <tr>
+                <th class="tariffs__offer tariffs__offer--hidden"></th>
+                <th class="tariffs__offer">
+                  <p class="tariffs__item-title">База</p>
+                  1,99 USD
+                </th>
+                <th class="tariffs__offer tariffs__offer--hit">
+                  <p class="tariffs__item-title">Стандарт</p>
+                  3,99 USD
+                </th>
+                <th class="tariffs__offer">
+                  <p class="tariffs__item-title">АНЛИМ</p>
+                  9,99 USD
+                </th>
+              </tr>
+              <tr class="tariffs__row">
+                <td class="tariffs__options tariffs__options--hidden">Розовый фильтр</td>
+                <td class="tariffs__options tariffs__options--yes"><span class="tariffs--visually-hidden">Розовый фильтр</span></td>
+                <td class="tariffs__options tariffs__options--yes"><span class="tariffs--visually-hidden">Розовый фильтр</span></td>
+                <td class="tariffs__options tariffs__options--yes"><span class="tariffs--visually-hidden">Розовый фильтр</span></td>
+              </tr>
+              <tr class="tariffs__row">
+                <td class="tariffs__options tariffs__options--hidden">Смайлики</td>
+                <td class="tariffs__options tariffs__options--no"><span class="tariffs--visually-hidden">Смайлики</span></td>
+                <td class="tariffs__options tariffs__options--yes"><span class="tariffs--visually-hidden">Смайлики</span></td>
+                <td class="tariffs__options tariffs__options--yes"><span class="tariffs--visually-hidden">Смайлики</span></td>
+              </tr>
+              <tr class="tariffs__row">
+                <td class="tariffs__options tariffs__options--hidden">Комментарии</td>
+                <td class="tariffs__options tariffs__options--no"><span class="tariffs--visually-hidden">Комментарии</span></td>
+                <td class="tariffs__options tariffs__options--no"><span class="tariffs--visually-hidden">Комментарии</span></td>
+                <td class="tariffs__options tariffs__options--yes"><span class="tariffs--visually-hidden">Комментарии</span></td>
+              </tr>
+            </table>
           </div>
           <div class="tariffs__controls slider__controls">
-            <i class="slider__control"></i>
-            <i class="slider__control slider__control--active"></i>
-            <i class="slider__control"></i>
+            <i class="slider__control" aria-label="Переключатель слайдера"></i>
+            <i class="slider__control slider__control--active" aria-label="Переключатель слайдера"></i>
+            <i class="slider__control" aria-label="Переключатель слайдера"></i>
           </div>
         </div>
       </section>
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__content">
-          <div class="wrapper">
+        <div class="wrapper">
+          <div class="contacts__content">
             <p>Остались вопросы?</p>
             <p>Свяжитесь с нами!</p>
           </div>
-        </div>
-
-        <div class="contacts__container">
-          <div class="wrapper">
-              <ul class="contacts__list">
-                <li class="contacts__item">
-                  <p class="contacts__title">Звоните:</p>
-                  <p class="contacts__text">+7 (812) 555-66-66</p>
-                </li>
-                <li class="contacts__item contacts__item--order">
-                  <p class="contacts__title">Пишите:</p>
-                  <p class="contacts__text contacts__text--mail">mail@htmlacademy.ru</p>
-                </li>
-                <li class="contacts__item">
-                  <p class="contacts__title">Приезжайте в гости:</p>
-                  <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
-                </li>
-              </ul>
+          <div class="contacts__container">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <p class="contacts__title">Звоните:</p>
+                <p class="contacts__text"><a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a></p>
+              </li>
+              <li class="contacts__item contacts__item--order">
+                <p class="contacts__title">Пишите:</p>
+                <p class="contacts__text"><a class="contacts__link contacts__link--mail" href="mailto:example@gmail.com">mail@htmlacademy.ru</a></p>
+              </li>
+              <li class="contacts__item">
+                <p class="contacts__title">Приезжайте в гости:</p>
+                <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+              </li>
+            </ul>
           </div>
         </div>
 
         <svg width="596" height="62"><use xlink:href="#triangle-footer"></use></svg>
 
-        <p class="contacts__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.6053221349337!2d30.322569925624634!3d59.93884523865473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1557905968123!5m2!1sru!2sru" width="100%" height="459" frameborder="0" style="border: 0;" allowfullscreen></iframe>
+        <div class="contacts__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.6053221349337!2d30.322569925624634!3d59.93884523865473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1557905968123!5m2!1sru!2sru" height="459" style="border: 0;" allowfullscreen></iframe>
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@1x.webp 2x">
@@ -280,33 +283,27 @@
             <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
             <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="645" alt="Адрес офиса">
           </picture>
-        </p>
+        </div>
 
       </section>
     </main>
 
-    <footer class="page-footer">
-      <div class="wrapper">
-        <div class="page-footer__hidden">
-          <div class="page-footer__container">
-            <a class="page-footer__logo" href="index.html">
-              <svg class="page-footer__logo-image" width="147" height="40"><use xlink:href="#logo-footer"></use></svg>
+    <footer class="page-footer page-footer--hidden wrapper">
+          <a class="page-footer__logo" href="index.html">
+            <svg class="page-footer__logo-image" width="147" height="40"><use xlink:href="#logo-footer" aria-label="Логотип Pink"></use></svg>
+          </a>
+
+          <ul class="page-footer__social social-list">
+            <li class="social-list__item social-list__item--tw"><a class="social-list__link" href="#"><span class="visually-hidden">Twitter</span></a></li>
+            <li class="social-list__item social-list__item--fb"><a class="social-list__link" href="#"><span class="visually-hidden">Facebook</span></a></li>
+            <li class="social-list__item social-list__item--youtube"><a class="social-list__link" href="#"><span class="visually-hidden">Youtube</span></a></li>
+          </ul>
+
+          <p class="page-footer__copyright">Разработано
+            <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+              <svg class="page-footer__copyright-logo" width="27" height="34" aria-label="Логотип HTML Academy"><use xlink:href="#logo-htmlacademy"></use></svg>
             </a>
-
-            <ul class="page-footer__social social-list">
-              <li class="social-list__item social-list__item--tw"><a class="social-list__link" href="#"><span class="visually-hidden">Twitter</span></a></li>
-              <li class="social-list__item social-list__item--fb"><a class="social-list__link" href="#"><span class="visually-hidden">Facebook</span></a></li>
-              <li class="social-list__item social-list__item--youtube"><a class="social-list__link" href="#"><span class="visually-hidden">Youtube</a></span></li>
-            </ul>
-
-            <p class="page-footer__copyright">Разработано
-              <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-                <svg class="page-footer__copyright-logo" width="27" height="34"><use xlink:href="#logo-htmlacademy"></use></svg>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
+          </p>
     </footer>
 
     <script src="js/picturefill.js" async></script>
